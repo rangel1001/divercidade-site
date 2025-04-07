@@ -3,92 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVERCIDADE - Link Rápido</title>
+  <title>Divercidade - Produtos que resolvem</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff8f0;
+      background: #fff;
       color: #333;
+      margin: 0;
+      padding: 0;
       text-align: center;
+    }
+    header {
+      background: #f97316;
+      color: white;
       padding: 20px;
     }
-    .logo {
-      max-width: 150px;
-      margin-bottom: 15px;
+    header img {
+      height: 60px;
     }
     h1 {
-      color: #e67e22;
+      margin: 10px 0 5px;
     }
-    p {
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-    .link-btn {
-      display: block;
-      background-color: #e67e22;
-      color: white;
-      text-decoration: none;
-      padding: 15px 20px;
-      margin: 10px auto;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
+    p.slogan {
+      margin: 0;
+      font-size: 1.1em;
       font-weight: bold;
-      transition: 0.3s;
     }
-    .link-btn:hover {
-      background-color: #d35400;
+    .buttons {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+    .buttons a {
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1em;
+      width: 80%;
+      max-width: 400px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
     .product {
-      margin: 30px auto;
-      max-width: 400px;
-      text-align: left;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
     }
     .product img {
       width: 100%;
       border-radius: 10px;
     }
-    .product h3 {
-      color: #e67e22;
-    }
     footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #aaa;
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/rangel1001/divercidade/main/assets/logo-divercidade.png" alt="DIVERCIDADE logo" class="logo">
-  <h1>DIVERCIDADE</h1>
-  <p>Produtos que resolvem o seu dia a dia!</p>
+  <header>
+    <img src="https://raw.githubusercontent.com/rangel1001/divercidade-site/main/assets/logo-divercidade.png" alt="Logo Divercidade">
+    <h1>Divercidade</h1>
+    <p class="slogan">Produtos que resolvem</p>
+  </header>
 
-  <a href="https://wa.me/244942853626" class="link-btn">💬 Falar no WhatsApp</a>
-  <a href="https://rangel1001.github.io/#produtos" class="link-btn">🛍️ Ver Produtos</a>
-  <a href="https://rangel1001.github.io/revendedores.html" class="link-btn">🚀 Quero ser Revendedor</a>
-  <a href="https://rangel1001.github.io/#contato" class="link-btn">📨 Enviar Mensagem</a>
-
-  <div class="product">
-    <img src="https://rangel1001.github.io/assets/filtro-anti-entupimento.avif" alt="Filtro Anti-Entupimento">
-    <h3>Filtro Anti-entupimento</h3>
-    <p>Evite entupimentos em sua casa de forma prática e econômica.</p>
+  <div class="buttons">
+    <a href="https://wa.me/244942853626" target="_blank">📱 Falar no WhatsApp</a>
+    <a href="#produtos">🛍️ Ver Produtos</a>
+    <a href="/revendedores.html" target="_blank">🤝 Seja Revendedor</a>
+    <a href="#contato">📩 Fale Connosco</a>
   </div>
 
-  <div class="product">
-    <img src="https://rangel1001.github.io/assets/lubrificante.png" alt="Lubrificante Intimo">
-    <h3>Pacotinhos de Lubrificante</h3>
-    <p>Discreto, eficaz e prático para uso pessoal ou venda.</p>
-  </div>
+  <section class="products" id="produtos">
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/rangel1001/divercidade-site/main/assets/filtro-antientupimento.jpg" alt="Filtro Anti-entupimento">
+      <p>Filtro Anti-entupimento</p>
+    </div>
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/rangel1001/divercidade-site/main/assets/lubrificante.png" alt="Pacotinhos de Lubrificante">
+      <p>Pacotinhos de Lubrificante</p>
+    </div>
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/rangel1001/divercidade-site/main/assets/absorvente.jpg" alt="Absorventes Anti-suor">
+      <p>Absorventes Anti-suor</p>
+    </div>
+  </section>
 
-  <div class="product">
-    <img src="https://rangel1001.github.io/assets/absorvente-anti-suor.jpg" alt="Absorvente anti-suor">
-    <h3>Absorvente Anti-Suor</h3>
-    <p>Mantenha-se seco e confortável com esse produto indispensável.</p>
-  </div>
-
-  <footer>
-    &copy; 2025 DIVERCIDADE | Aqui você faz kumbu com o teu pouco kumbu
+  <footer id="contato">
+    <p><strong>Divercidade</strong> - Aqui você faz <strong>KUMBU</strong> com o teu pouco <strong>KUMBU</strong></p>
+    <p>Email: ldadivercidade@gmail.com</p>
   </footer>
 </body>
 </html>
