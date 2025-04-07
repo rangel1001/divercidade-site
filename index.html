@@ -1,128 +1,151 @@
-<!-- Página com melhorias para o site da DIVERCIDADE -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVERCIDADE - Produtos que Resolvem</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divercidade - Produtos que Resolvem</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
     header {
-      background-color: #f97316;
+      background-color: #ff6600;
       color: white;
       padding: 1rem;
       position: fixed;
       width: 100%;
       top: 0;
-      left: 0;
-      z-index: 1000;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ff6600;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
     .container {
-      margin-top: 80px;
-      padding: 20px;
+      padding: 6rem 1rem 2rem;
     }
-    .products {
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
-    .product {
+
+    .produto {
       border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
+      border-radius: 8px;
+      padding: 1rem;
       text-align: center;
-      background: #fff;
     }
-    .product img {
+
+    .produto img {
       max-width: 100%;
-      border-radius: 10px;
+      height: auto;
     }
-    .revendedores {
-      background: #f3f3f3;
-      padding: 30px;
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    footer {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .btn {
-      background: #f97316;
-      color: white;
-      padding: 10px 15px;
+
+    .produto button {
+      background-color: #ff6600;
       border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
+    <h1>Divercidade</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="menu">
       <a href="#produtos">Produtos</a>
-      <a href="#revendedores">Revendedores</a>
-      <a href="#sobre">Sobre</a>
+      <a href="revendedores.html">Revendedores</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <div class="container">
-    <section id="produtos">
-      <h2>Produtos em Destaque</h2>
-      <div class="products">
-        <div class="product">
-          <img src="https://via.placeholder.com/300x200" alt="Filtro anti-entupimento">
-          <h3>Filtro Anti-entupimento</h3>
-          <p>Evita entupimentos em casa de banho e cozinha. Prático e descartável.</p>
-          <a href="#contato" class="btn">Quero Comprar</a>
-        </div>
-        <div class="product">
-          <img src="https://via.placeholder.com/300x200" alt="Lubrificantes">
-          <h3>Pacotinhos de Lubrificante</h3>
-          <p>Prático, discreto e fácil de carregar. Perfeito para uso individual.</p>
-          <a href="#contato" class="btn">Quero Comprar</a>
-        </div>
-        <div class="product">
-          <img src="https://via.placeholder.com/300x200" alt="Absorventes anti-suor">
-          <h3>Absorventes Anti-suor</h3>
-          <p>Proteja suas roupas e mantenha a confiança durante todo o dia.</p>
-          <a href="#contato" class="btn">Quero Comprar</a>
-        </div>
+    <h2 id="produtos">Produtos em Destaque</h2>
+    <div class="grid">
+      <div class="produto">
+        <img src="https://uploaddeimagens.com.br/images/004/778/148/original/FiltroAntiEntupimento.jpg" alt="Filtro anti entupimento">
+        <h3>Filtro Anti-Entupimento</h3>
+        <p>Evite entupimentos na sua cozinha e casa de banho com esse filtro simples e eficaz.</p>
+        <button>Comprar</button>
       </div>
-    </section>
 
-    <section id="revendedores" class="revendedores">
-      <h2>Revendedores</h2>
-      <p>Faça parte do nosso time de revendedores e comece a ganhar ainda hoje com produtos que se vendem sozinhos!</p>
-      <p><strong>AQUI VOCÊ FAZ KUMBU COM O TEU POUCO KUMBU</strong></p>
-      <a href="revendedores.html" class="btn">Quero ser Revendedor</a>
-    </section>
+      <div class="produto">
+        <img src="https://uploaddeimagens.com.br/images/004/778/149/original/Lubrificante.png" alt="Lubrificante pacotinho">
+        <h3>Pacotinho de Lubrificante</h3>
+        <p>Lubrificante em sachê prático e discreto para o dia a dia.</p>
+        <button>Comprar</button>
+      </div>
 
-    <section id="sobre">
-      <h2>Sobre a Loja</h2>
-      <p>A <strong>DIVERCIDADE</strong> é uma loja feita para resolver. Vendemos produtos simples, acessíveis e práticos que ajudam no dia a dia. Nosso objetivo é oferecer soluções reais para pequenos problemas que todos enfrentam em casa, no trabalho ou na rua.</p>
-    </section>
-
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Fale conosco pelo WhatsApp ou envie uma mensagem pelo formulário.</p>
-      <a href="https://wa.me/seunumerowhatsapp" class="btn">Falar no WhatsApp</a>
-    </section>
+      <div class="produto">
+        <img src="https://uploaddeimagens.com.br/images/004/778/150/original/Absorvente.jpg" alt="Absorvente anti suor">
+        <h3>Absorvente Anti-Suor</h3>
+        <p>Ideal para evitar manchas de suor nas roupas. Prático e confortável.</p>
+        <button>Comprar</button>
+      </div>
+    </div>
   </div>
 
-  <footer>
-    &copy; 2025 DIVERCIDADE - Todos os direitos reservados
-  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
