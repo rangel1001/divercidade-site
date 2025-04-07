@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seja um Revendedor | DIVERCIDADE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔️ ";
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e55b00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Faça Parte da Família DIVERCIDADE</h1>
+    <p>Aqui você faz Kumbu com o teu pouco Kumbu!</p>
+  </header>
+
+  <section>
+    <h2>Por que se tornar um revendedor?</h2>
+    <ul>
+      <li>Alta lucratividade</li>
+      <li>Produtos úteis e de fácil venda</li>
+      <li>Baixo investimento inicial</li>
+      <li>Treinamento e suporte personalizado</li>
+      <li>Entrega rápida em todo país</li>
+    </ul>
+
+    <h2>Inscreva-se agora!</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <input type="tel" name="telefone" placeholder="Seu número de telefone" required>
+      <input type="text" name="provincia" placeholder="Sua província" required>
+      <textarea name="mensagem" placeholder="Deixe uma mensagem (opcional)"></textarea>
+      <button type="submit">Quero ser revendedor</button>
+    </form>
+  </section>
+</body>
+</html>
